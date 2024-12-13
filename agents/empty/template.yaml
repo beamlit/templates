@@ -1,0 +1,7 @@
+variables:
+  - name: "Framework"
+    description: "Activate ruff linting"
+    default: "true"
+  - name: "Ruff"
+    description: "Activate ruff linting"
+    default: "true"

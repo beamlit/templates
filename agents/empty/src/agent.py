@@ -5,7 +5,7 @@ from beamlit.models import AgentDeployment
 
 
 @agent(
-    AgentDeployment(
+    bl_agent=AgentDeployment(
         agent="{{.ProjectName}}",
         description="{{.ProjectDescription}}",
         model="{{.Model}}",

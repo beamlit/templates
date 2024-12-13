@@ -5,7 +5,7 @@ description = "{{ .ProjectDescription }}"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "beamlit>=0.0.20rc",
+    "beamlit>=0.0.23rc",
 ]
 {{ if eq .Ruff "true" }}
 [dependency-groups]
