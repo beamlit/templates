@@ -6,6 +6,8 @@ variables:
   - name: "License"
     type: "select"
     description: "Select the license to use"
+    file: LICENSE
+    skip: "none"
     options:
       - label: "None"
         value: "none"
@@ -21,9 +23,13 @@ variables:
       - label: "Initialize READMEs"
         value: "readme"
         name: "Readme"
+        file: README.md
+        skip: ""
       - label: "Github action"
         value: "github-action"
         name: "GithubAction"
+        folder: .github
+        skip: ""
       - label: "Linting with Ruff"
         value: "ruff"
         name: "Ruff"
