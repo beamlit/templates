@@ -12,14 +12,18 @@ variables:
       - label: "GPL 3.0"
         value: "gpl"
   - name: "Features"
-    type: "checkbox"
+    type: "multiselect"
     options:
-      - label: "Initialize READMEs"
+      - label: "Initialize README"
         value: "readme"
         name: "Readme"
+        file: README.md
+        skip: ""
       - label: "Github action"
         value: "github-action"
         name: "GithubAction"
+        folder: .github
+        skip: ""
       - label: "Linting with Ruff"
         value: "ruff"
         name: "Ruff"
