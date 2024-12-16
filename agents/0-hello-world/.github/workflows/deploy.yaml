@@ -1,0 +1,14 @@
+name: Deploy Beamlit Agent
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    steps:
+      - uses: actions/checkout@v4
+      - uses: beamlit/beamlit-action@v1
+        with:
+          workspace: {{ .Workspace }}
+          api_key: ${{ secrets.BEAMLIT_API_KEY }}

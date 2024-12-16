@@ -20,7 +20,7 @@ variables:
   - name: "Features"
     type: "multiselect"
     options:
-      - label: "Initialize READMEs"
+      - label: "Initialize README"
         value: "readme"
         name: "Readme"
         file: README.md
