@@ -11,4 +11,4 @@ jobs:
       - uses: beamlit/beamlit-action@v1
         with:
           workspace: {{ .Workspace }}
-          api_key: ${{ secrets.BEAMLIT_API_KEY }}
+          api_key: {{ `${{ secrets.BEAMLIT_API_KEY }}` }}
