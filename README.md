@@ -1,7 +1,7 @@
 # Beamlit Templates
 
 <p align="center">
-  <img src="./assets/beamlit-logo.png" alt="Beamlit Templates"/>
+  <img src="./github/beamlit-logo.png" alt="Beamlit Templates"/>
 </p>
 
 ![GitHub License](https://img.shields.io/github/license/beamlit/templates)
