@@ -1,24 +1,16 @@
 import uuid
 
 from beamlit.agents import agent
-from beamlit.models import AgentDeployment
 from customfunctions.helloworld import helloworld
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
 
-chat = ChatOpenAI(model="{{.Model}}")
+chat = ChatOpenAI()
 memory = MemorySaver()
 custom_agent = create_react_agent(chat, tools=[helloworld], checkpointer=memory)
 
-@agent(
-    bl_agent=AgentDeployment(
-        agent="{{.ProjectName}}",
-        description="{{.ProjectDescription}}",
-        model="{{.Model}}",
-    ),
-    agent=custom_agent,
-)
+@agent(agent=custom_agent)
 async def main(agent, chat_model, tools, body, headers=None, query_params=None, **_):
     if len(tools) > 0:
         agent.bind_tools(tools)
