@@ -1,6 +1,6 @@
 variables:
-  - name: "Model"
-    description: "Select the model to use"
+  - name: "Beamlit model"
+    description: "Model to use for your agent app"
     type: "model"
   - name: "License"
     type: "select"
@@ -15,7 +15,7 @@ variables:
       - label: "GPL 3.0"
         value: "gpl"
   - name: "Features"
-    type: "checkbox"
+    type: "multiselect"
     options:
       - label: "Initialize READMEs"
         value: "readme"
