@@ -2,7 +2,7 @@ from beamlit.functions import function
 
 
 @function()
-def helloworld(query: str):
+async def helloworld(query: str):
     """
     Say hello to the world from beamlit
     """

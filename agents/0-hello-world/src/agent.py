@@ -19,7 +19,7 @@ async def main(agent, chat_model, tools, body, headers=None, query_params=None, 
     agent_body = {"messages": [("user", body["input"])]}
     responses = []
 
-    for chunk in agent.stream(agent_body, config=agent_config):
+    async for chunk in agent.astream(agent_body, config=agent_config):
         responses.append(chunk)
     content = responses[-1]
     return content["agent"]["messages"][-1].content
