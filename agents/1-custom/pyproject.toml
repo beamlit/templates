@@ -2,7 +2,9 @@
 name = "{{ .ProjectName }}"
 version = "0.1.0"
 description = "{{ .ProjectDescription }}"
+{{ if eq .Readme "readme" }}
 readme = "README.md"
+{{ end }}
 requires-python = ">=3.12"
 dependencies = [
     "beamlit>=0.0.24rc20",
