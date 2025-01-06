@@ -4,7 +4,7 @@ from beamlit.agents import agent
 
 
 @agent(
-    bl_agent={
+    agent={
         "metadata": {
             "name": "{{.ProjectName}}",
             "description": "{{.ProjectDescription}}",
