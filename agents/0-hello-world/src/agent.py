@@ -1,15 +1,18 @@
 import uuid
 
 from beamlit.agents import agent
-from beamlit.models import AgentDeployment
 
 
 @agent(
-    bl_agent=AgentDeployment(
-        agent="{{.ProjectName}}",
-        description="{{.ProjectDescription}}",
-        model="{{.Model}}",
-    ),
+    bl_agent={
+        "metadata": {
+            "name": "{{.ProjectName}}",
+            "description": "{{.ProjectDescription}}",
+        },
+        "spec": {
+            "model": "{{.Model}}",
+        },
+    }
 )
 async def main(agent, chat_model, tools, body, headers=None, query_params=None, **_):
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
