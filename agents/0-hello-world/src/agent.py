@@ -7,10 +7,10 @@ from beamlit.agents import agent
     agent={
         "metadata": {
             "name": "{{.ProjectName}}",
-            "description": "{{.ProjectDescription}}",
         },
         "spec": {
             "model": "{{.Model}}",
+            "description": "{{.ProjectDescription}}",
         },
     }
 )
