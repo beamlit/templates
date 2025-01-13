@@ -1,6 +1,7 @@
 import uuid
 
 from beamlit.agents import agent
+from fastapi import Request
 
 
 @agent(
@@ -14,7 +15,8 @@ from beamlit.agents import agent
         },
     }
 )
-async def main(agent, chat_model, tools, body, headers=None, query_params=None, **_):
+async def main(agent, chat_model, tools, request: Request, headers=None, query_params=None, **_):
+    body = await request.json()
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     if body.get("inputs"):
         body["input"] = body["inputs"]
