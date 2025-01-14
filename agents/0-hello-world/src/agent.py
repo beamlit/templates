@@ -1,7 +1,11 @@
 import uuid
+from typing import Union
 
 from beamlit.agents import agent
 from fastapi import Request
+from langchain_core.language_models.chat_models import BaseChatModel
+from langchain_core.tools import BaseTool
+from langgraph.graph.graph import CompiledGraph
 
 
 @agent(
@@ -15,7 +19,13 @@ from fastapi import Request
         },
     }
 )
-async def main(agent, chat_model, tools, request: Request, headers=None, query_params=None, **_):
+async def main(
+    agent: Union[None, CompiledGraph],
+    chat_model: Union[None, BaseChatModel],
+    tools: list[BaseTool],
+    request: Request,
+    **_,
+):
     body = await request.json()
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     if body.get("inputs"):
@@ -27,4 +37,5 @@ async def main(agent, chat_model, tools, request: Request, headers=None, query_p
     async for chunk in agent.astream(agent_body, config=agent_config):
         responses.append(chunk)
     content = responses[-1]
+    return content["agent"]["messages"][-1].content
     return content["agent"]["messages"][-1].content

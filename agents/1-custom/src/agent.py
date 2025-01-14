@@ -1,10 +1,14 @@
 import uuid
+from typing import Union
 
 from beamlit.agents import agent
 from customfunctions.helloworld import helloworld
 from fastapi import Request
+from langchain_core.language_models.chat_models import BaseChatModel
+from langchain_core.tools import BaseTool
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph.graph import CompiledGraph
 from langgraph.prebuilt import create_react_agent
 
 chat = ChatOpenAI()
@@ -12,7 +16,13 @@ memory = MemorySaver()
 custom_agent = create_react_agent(chat, tools=[helloworld], checkpointer=memory)
 
 @agent(agent=custom_agent)
-async def main(agent, chat_model, tools, request: Request, headers=None, query_params=None, **_):
+async def main(
+    agent: Union[None, CompiledGraph],
+    chat_model: Union[None, BaseChatModel],
+    tools: list[BaseTool],
+    request: Request,
+    **_,
+):
     body = await request.json()
     if len(tools) > 0:
         agent.bind_tools(tools)
