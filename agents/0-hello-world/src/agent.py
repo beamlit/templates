@@ -38,4 +38,3 @@ async def main(
         responses.append(chunk)
     content = responses[-1]
     return content["agent"]["messages"][-1].content
-    return content["agent"]["messages"][-1].content
