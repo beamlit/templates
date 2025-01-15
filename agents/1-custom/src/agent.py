@@ -15,7 +15,7 @@ chat = ChatOpenAI()
 memory = MemorySaver()
 custom_agent = create_react_agent(chat, tools=[helloworld], checkpointer=memory)
 
-@agent(agent=custom_agent)
+@agent(override_agent=custom_agent)
 async def main(
     agent: Union[None, CompiledGraph],
     chat_model: Union[None, BaseChatModel],
