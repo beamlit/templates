@@ -18,14 +18,14 @@ custom_agent = create_react_agent(chat, tools=[helloworld], checkpointer=memory)
 @agent(override_agent=custom_agent)
 async def main(
     agent: Union[None, CompiledGraph],
-    chat_model: Union[None, BaseChatModel],
-    tools: list[BaseTool],
+    model: Union[None, BaseChatModel],
+    functions: list[BaseTool],
     request: Request,
     **_,
 ):
     body = await request.json()
-    if len(tools) > 0:
-        agent.bind_tools(tools)
+    if len(functions) > 0:
+        agent.bind_tools(functions)
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     if body.get("inputs"):
         body["input"] = body["inputs"]

@@ -21,8 +21,8 @@ from langgraph.graph.graph import CompiledGraph
 )
 async def main(
     agent: Union[None, CompiledGraph],
-    chat_model: Union[None, BaseChatModel],
-    tools: list[BaseTool],
+    model: Union[None, BaseChatModel],
+    functions: list[BaseTool],
     request: Request,
     **_,
 ):
