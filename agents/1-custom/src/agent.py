@@ -14,7 +14,7 @@ from langchain_openai import ChatOpenAI
 
 memory = MemorySaver()
 {{ if ne .Model "" }}
-model = get_chat_model("{{.Model}}")
+model, _, _ = get_chat_model("{{.Model}}")
 {{ else }}
 model = ChatOpenAI()
 {{ end }}
