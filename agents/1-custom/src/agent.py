@@ -23,6 +23,7 @@ functions.append(helloworld)
 custom_agent = create_react_agent(model, tools=functions, checkpointer=memory)
 
 @agent(
+    override_agent=custom_agent,
     agent={
         "metadata": {
             "name": "{{.ProjectName}}",
