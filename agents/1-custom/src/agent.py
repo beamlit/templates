@@ -1,5 +1,4 @@
 import uuid
-from typing import Union
 
 from beamlit.agents import agent
 from customfunctions.helloworld import helloworld
@@ -19,7 +18,7 @@ model = get_chat_model("{{.Model}}")
 {{ else }}
 model = ChatOpenAI()
 {{ end }}
-functions = get_functions()
+functions = get_functions(warning=False)
 functions.append(helloworld)
 custom_agent = create_react_agent(model, tools=functions, checkpointer=memory)
 
@@ -35,8 +34,6 @@ custom_agent = create_react_agent(model, tools=functions, checkpointer=memory)
 )
 async def main(request: Request):
     body = await request.json()
-    if len(functions) > 0:
-        agent.bind_tools(functions)
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     if body.get("inputs"):
         body["input"] = body["inputs"]
