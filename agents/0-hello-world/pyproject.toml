@@ -7,7 +7,7 @@ readme = "README.md"
 {{ end }}
 requires-python = ">=3.12"
 dependencies = [
-    "beamlit>=0.0.34rc61",
+    "beamlit>=0.0.34rc63",
 ]
 {{ if eq .Ruff "ruff" }}
 [dependency-groups]

@@ -19,13 +19,7 @@ from langgraph.graph.graph import CompiledGraph
         },
     }
 )
-async def main(
-    agent: Union[None, CompiledGraph],
-    model: Union[None, BaseChatModel],
-    functions: list[BaseTool],
-    request: Request,
-    **_,
-):
+async def main(request: Request, agent: Union[None, CompiledGraph]):
     body = await request.json()
     agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     if body.get("inputs"):
