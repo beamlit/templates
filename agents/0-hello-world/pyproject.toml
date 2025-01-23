@@ -5,7 +5,7 @@ description = "{{ .ProjectDescription }}"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "beamlit>=0.0.34rc75",
+    "beamlit>=0.0.34rc76",
 ]
 [dependency-groups]
 dev = [
