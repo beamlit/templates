@@ -1,8 +1,7 @@
 name: Deploy Beamlit Agent
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -14,3 +13,5 @@ jobs:
         with:
           workspace: {{ .Workspace }}
           apikey: {{ `${{ secrets.BEAMLIT_API_KEY }}` }}
+      - run: |
+          bl deploy

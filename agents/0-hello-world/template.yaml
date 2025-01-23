@@ -3,33 +3,3 @@ variables:
     label: "Beamlit model"
     description: "Model to use for your agent app"
     type: "model"
-  - name: "License"
-    type: "select"
-    description: "Select the license to use"
-    file: LICENSE
-    skip: "none"
-    options:
-      - label: "None"
-        value: "none"
-      - label: "MIT"
-        value: "mit"
-      - label: "Apache 2.0"
-        value: "apache"
-      - label: "GPL 3.0"
-        value: "gpl"
-  - name: "Features"
-    type: "multiselect"
-    options:
-      - label: "Initialize README"
-        value: "readme"
-        name: "Readme"
-        file: README.md
-        skip: ""
-      - label: "Github action"
-        value: "github-action"
-        name: "GithubAction"
-        folder: .github
-        skip: ""
-      - label: "Linting with Ruff"
-        value: "ruff"
-        name: "Ruff"
