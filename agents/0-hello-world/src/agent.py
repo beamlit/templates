@@ -1,7 +1,7 @@
 import uuid
 from typing import Union
 
-from beamlit.agents import agent
+from beamlit.agents import agent, get_default_thread
 from fastapi import Request
 from langgraph.graph.graph import CompiledGraph
 
@@ -19,7 +19,8 @@ from langgraph.graph.graph import CompiledGraph
 )
 async def main(request: Request, agent: Union[None, CompiledGraph]):
     body = await request.json()
-    agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
+    thread_id = get_default_thread(request) or str(uuid.uuid4())
+    agent_config = {"configurable": {"thread_id": thread_id}}
     if body.get("inputs"):
         body["input"] = body["inputs"]
 

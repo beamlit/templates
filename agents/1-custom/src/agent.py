@@ -1,6 +1,6 @@
 import uuid
 
-from beamlit.agents import agent
+from beamlit.agents import agent, get_default_thread
 from customfunctions.helloworld import helloworld
 from fastapi import Request
 from langgraph.checkpoint.memory import MemorySaver
@@ -35,7 +35,8 @@ custom_agent = create_react_agent(model, tools=functions, checkpointer=memory)
 )
 async def main(request: Request):
     body = await request.json()
-    agent_config = {"configurable": {"thread_id": str(uuid.uuid4())}}
+    thread_id = get_default_thread(request) or str(uuid.uuid4())
+    agent_config = {"configurable": {"thread_id": thread_id}}
     if body.get("inputs"):
         body["input"] = body["inputs"]
 
