@@ -13,7 +13,7 @@
   "author": "{{.Author}}",
   "license": "MIT",
   "dependencies": {
-    "@beamlit/sdk": "^0.0.34-alpha.7"
+    "@beamlit/sdk": "^0.0.35"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
