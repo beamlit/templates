@@ -4,8 +4,6 @@ __pycache__/
 *$py.class
 .ruff_cache
 node_modules
-tmp
-src/agents/beamlit.py
 # C extensions
 *.so
 
