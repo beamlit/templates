@@ -1,5 +1,5 @@
-import { createApp, runApp } from "@beamlit/sdk";
+import { createApp, logger, runApp } from "@beamlit/sdk";
 
 createApp()
   .then((app) => runApp(app))
-  .catch((err) => console.error(err));
+  .catch((err) => logger.error(err));
