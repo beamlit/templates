@@ -4,8 +4,8 @@
   "description": "{{.ProjectDescription}}",
   "main": "agent.ts",
   "scripts": {
-    "start": "npx tsx --tsconfig=tsconfig.json node_modules/@beamlit/sdk/src/serve/index.ts",
-    "dev": "npx tsx --tsconfig=tsconfig.json --watch node_modules/@beamlit/sdk/src/serve/index.ts",
+    "start": "npx tsx --tsconfig=tsconfig.json index.ts",
+    "dev": "npx tsx --tsconfig=tsconfig.json --watch index.ts",
     "login": "bl login {{.Workspace}}",
     "deploy": "bl deploy"
   },
