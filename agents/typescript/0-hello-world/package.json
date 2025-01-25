@@ -4,13 +4,14 @@
   "description": "{{.ProjectDescription}}",
   "main": "agent.ts",
   "scripts": {
-    "start": "bl serve",
+    "start": "npx tsx --tsconfig=tsconfig.json node_modules/@beamlit/sdk/src/serve/index.ts",
+    "dev": "npx tsx --tsconfig=tsconfig.json --watch node_modules/@beamlit/sdk/src/serve/index.ts",
     "login": "bl login {{.Workspace}}",
     "deploy": "bl deploy"
   },
   "keywords": [],
   "author": "{{.Author}}",
-  "license": "{{.License}}",
+  "license": "MIT",
   "dependencies": {
     "@beamlit/sdk": "^0.0.34-alpha.7"
   },
