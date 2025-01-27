@@ -1,9 +1,9 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "lib": ["es2023"],
+    "module": "nodenext",
+    "target": "es2022",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
