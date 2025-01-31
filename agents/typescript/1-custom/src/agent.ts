@@ -42,7 +42,7 @@ export const agent = async () => {
   const functions = await getFunctions();
   functions.push(helloworld);
   {{ if ne .Model "" }}
-  const model = getChatModel("{{.Model}}")
+  const model = await getChatModel("{{.Model}}")
   {{ else }}
   const model = new ChatOpenAI()
   {{ end }}
