@@ -1,0 +1,5 @@
+variables:
+  - name: "Model"
+    label: "Beamlit model"
+    description: "Model to use for your agent app"
+    type: "model"
