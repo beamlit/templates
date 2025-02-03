@@ -1,4 +1,5 @@
 import { getChatModel, getDefaultThread, getFunctions, wrapAgent } from "@beamlit/sdk";
+import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph, MemorySaver } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
@@ -42,7 +43,7 @@ export const agent = async () => {
   const functions = await getFunctions();
   functions.push(helloworld);
   {{ if ne .Model "" }}
-  const model = await getChatModel("{{.Model}}")
+  const model = (await getChatModel("gpt-4o-mini")) as BaseChatModel<any, any>;
   {{ else }}
   const model = new ChatOpenAI()
   {{ end }}
