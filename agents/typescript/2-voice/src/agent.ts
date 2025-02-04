@@ -16,14 +16,16 @@ const websocketHandler = async (
   };
 };
 
-export const agent = wrapAgent(websocketHandler, {
-  agent: {
-    metadata: {
-      name: "{{.ProjectName}}",
+export const agent = async () => {
+  return wrapAgent(websocketHandler, {
+    agent: {
+      metadata: {
+        name: "{{.ProjectName}}",
+      },
+      spec: {
+        model: "{{.Model}}",
+        description: "{{.ProjectDescription}}",
+      },
     },
-    spec: {
-      model: "{{.Model}}",
-      description: "{{.ProjectDescription}}",
-    },
-  },
-});
+  });
+};
