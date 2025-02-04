@@ -1,0 +1,5 @@
+variables:
+  - name: "Model"
+    label: "Beamlit voicemodel"
+    description: "Model to use for your voice agent"
+    type: "realtime-model"
