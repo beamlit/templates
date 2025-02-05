@@ -43,7 +43,7 @@ export const agent = async () => {
   const functions = await getFunctions();
   functions.push(helloworld);
   {{ if ne .Model "" }}
-  const model = (await getChatModel("gpt-4o-mini")) as BaseChatModel<any, any>;
+  const model = await getChatModel("gpt-4o-mini") as BaseChatModel<any, any>;
   {{ else }}
   const model = new ChatOpenAI()
   {{ end }}
