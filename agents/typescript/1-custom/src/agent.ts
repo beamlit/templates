@@ -3,11 +3,11 @@ import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph, MemorySaver } from "@langchain/langgraph";
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
+import { ChatOpenAI } from "@langchain/openai";
 import { FastifyRequest } from "fastify";
 import { v4 as uuidv4 } from "uuid";
 import { helloworld } from "./customfunctions/helloworld";
 {{ if eq .Model "" }}
-import { ChatOpenAI } from "@langchain/openai";
 {{ end }}
 
 
@@ -43,7 +43,7 @@ export const agent = async () => {
   const functions = await getFunctions();
   functions.push(helloworld);
   {{ if ne .Model "" }}
-  const model = await getChatModel("gpt-4o-mini") as BaseChatModel<any, any>;
+  const model = await getChatModel("{{.Model}}") as BaseChatModel<any, any>;
   {{ else }}
   const model = new ChatOpenAI()
   {{ end }}
