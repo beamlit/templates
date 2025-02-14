@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@beamlit/sdk": "^0.0.56",
+    "@google/generative-ai": "^0.21.0",
     "@langchain/anthropic": "^0.3.12",
     "@langchain/cohere": "^0.3.2",
     "@langchain/deepseek": "^0.0.1",
