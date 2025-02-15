@@ -7,7 +7,7 @@ readme = "README.md"
 {{ end }}
 requires-python = ">=3.12"
 dependencies = [
-    "beamlit>=0.0.57",
+    "beamlit>=0.0.58",
     "langchain-openai>=0.3.0,<0.4.0",
     "langchain-cohere>=0.4.2",
     "langchain-xai>=0.2.0",
