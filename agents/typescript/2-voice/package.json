@@ -12,7 +12,7 @@
   "author": "{{.Author}}",
   "license": "MIT",
   "dependencies": {
-    "@beamlit/sdk": "^0.0.56",
+    "@beamlit/sdk": "^0.0.57",
     "@langchain/openai": "^0.3.17"
   },
   "devDependencies": {
