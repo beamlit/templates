@@ -1,11 +1,9 @@
-import { wrapFunction } from "@beamlit/sdk";
+import { wrapFunction } from "@blaxel/sdk";
 
 const helloWorld = () => {
-  return "Hello from Beamlit";
+  return "Hello from Blaxel";
 };
 
-
 export default wrapFunction(helloWorld, {
-  description: "Say hello to the world from beamlit"
+  description: "Say hello to the world from blaxel",
 });
-

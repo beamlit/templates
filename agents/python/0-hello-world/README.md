@@ -1,1 +1,1 @@
-# Beamlit Agent - {{ .ProjectName }}
+# Blaxel Agent - {{ .ProjectName }}

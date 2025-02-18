@@ -1,4 +1,4 @@
-import { getDefaultThread, wrapAgent } from "@beamlit/sdk";
+import { getDefaultThread, wrapAgent } from "@blaxel/sdk";
 import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph } from "@langchain/langgraph";
 import { FastifyRequest } from "fastify";
