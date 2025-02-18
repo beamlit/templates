@@ -1,4 +1,4 @@
-import { logger, wrapAgent } from "@beamlit/sdk";
+import { logger, wrapAgent } from "@blaxel/sdk";
 import { FastifyRequest } from "fastify";
 
 const websocketHandler = async (

@@ -1,4 +1,4 @@
-name: Deploy Beamlit Agent
+name: Deploy Blaxel Agent
 
 on:
   workflow_dispatch:
@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: beamlit/beamlit-action@v1
+      - uses: blaxel/blaxel-action@v1
         with:
           workspace: {{ .Workspace }}
-          apikey: {{ `${{ secrets.BEAMLIT_API_KEY }}` }}
+          apikey: {{ `${{ secrets.BL_API_KEY }}` }}
       - run: |
           bl deploy

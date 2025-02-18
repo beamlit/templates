@@ -1,4 +1,4 @@
-import { getChatModel, getDefaultThread, getFunctions, wrapAgent } from "@beamlit/sdk";
+import { getChatModel, getDefaultThread, getFunctions, wrapAgent } from "@blaxel/sdk";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { HumanMessage } from "@langchain/core/messages";
 import { CompiledGraph, MemorySaver } from "@langchain/langgraph";
