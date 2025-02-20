@@ -1,6 +1,6 @@
 variables:
   - name: "Model"
-    label: "Beamlit model"
+    label: "Blaxel model"
     description: "Model to use for your agent app"
     type: "model"
   - name: "License"

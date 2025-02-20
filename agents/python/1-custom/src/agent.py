@@ -1,13 +1,13 @@
 import uuid
 
-from beamlit.agents import agent, get_default_thread
+from blaxel.agents import agent, get_default_thread
 from customfunctions.helloworld import helloworld
 from fastapi import Request
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
-from beamlit.functions import get_functions
+from blaxel.functions import get_functions
 {{ if ne .Model "" }}
-from beamlit.agents import get_chat_model
+from blaxel.agents import get_chat_model
 {{ else }}
 from langchain_openai import ChatOpenAI
 {{ end }}

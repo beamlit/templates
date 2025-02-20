@@ -1,9 +1,9 @@
-from beamlit.functions import function
+from blaxel.functions import function
 
 
 @function()
 async def helloworld(query: str):
     """
-    Say hello to the world from beamlit
+    Say hello to the world from blaxel
     """
-    return "Hello from Beamlit"
+    return "Hello from Blaxel"

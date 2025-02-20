@@ -1,5 +1,5 @@
 variables:
   - name: "Model"
-    label: "Beamlit voicemodel"
+    label: "Blaxel voicemodel"
     description: "Model to use for your voice agent"
     type: "realtime-model"
