@@ -53,7 +53,7 @@ export const agent = async () => {
         name: "{{.ProjectName}}",
       },
       spec: {
-        description: "{{.ProjectDescription}}",
+        prompt: "{{.ProjectPrompt}}",
       },
     },
     overrideAgent: createReactAgent({

@@ -31,7 +31,7 @@ async def get_custom_agent():
             "name": "{{.ProjectName}}",
         },
         "spec": {
-            "description": "{{.ProjectDescription}}",
+            "prompt": "{{.ProjectPrompt}}",
         },
     },
 )

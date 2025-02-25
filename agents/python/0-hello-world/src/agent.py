@@ -13,7 +13,7 @@ from langgraph.graph.graph import CompiledGraph
         },
         "spec": {
             "model": "{{.Model}}",
-            "description": "{{.ProjectDescription}}",
+            "prompt": "{{.ProjectPrompt}}",
         },
     }
 )
