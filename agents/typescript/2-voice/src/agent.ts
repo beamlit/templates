@@ -24,7 +24,7 @@ export const agent = async () => {
       },
       spec: {
         model: "{{.Model}}",
-        description: "{{.ProjectDescription}}",
+        prompt: "{{.ProjectPrompt}}",
       },
     },
   });

@@ -39,7 +39,7 @@ export const agent = wrapAgent(req, {
     },
     spec: {
       model: "{{.Model}}",
-      description: "{{.ProjectDescription}}",
+      prompt: "{{.ProjectPrompt}}",
     },
   },
 });
