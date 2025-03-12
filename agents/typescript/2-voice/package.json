@@ -12,7 +12,7 @@
   "author": "{{.Author}}",
   "license": "MIT",
   "dependencies": {
-    "@blaxel/sdk": "^0.0.70",
+    "@blaxel/sdk": "^0.0.72",
     "@langchain/openai": "^0.3.17",
     "@langchain/core": "^0.3.42",
     "@langchain/langgraph": "^0.2.54",
