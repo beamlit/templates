@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: "Segoe UI", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+        --primary: 210 100% 50%; /* Blaxel Blue #0066FF */
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 100% 30%; /* Blaxel Dark Blue #003399 */
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+        --accent: 24 100% 50%; /* Blaxel Orange #FF6600 */
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 210 100% 50%; /* Matching primary */
+        --chart-1: 210 100% 50%; /* Blaxel Blue */
+        --chart-2: 210 100% 30%; /* Blaxel Dark Blue */
+        --chart-3: 24 100% 50%; /* Blaxel Orange */
+        --chart-4: 210 100% 70%; /* Lighter Blue */
+        --chart-5: 24 100% 70%; /* Lighter Orange */
+        --radius: 0.5rem;
+    }
+    .dark {
+        --background: 210 100% 5%; /* Very dark blue */
+        --foreground: 0 0% 98%;
+        --card: 210 100% 5%;
+        --card-foreground: 0 0% 98%;
+        --popover: 210 100% 5%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 210 100% 50%; /* Blaxel Blue */
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 100% 30%; /* Blaxel Dark Blue */
+        --secondary-foreground: 0 0% 100%;
+        --muted: 210 100% 10%;
+        --muted-foreground: 0 0% 63.9%;
+        --accent: 24 100% 50%; /* Blaxel Orange */
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 210 100% 15%;
+        --input: 210 100% 15%;
+        --ring: 210 100% 50%; /* Matching primary */
+        --chart-1: 210 100% 50%; /* Blaxel Blue */
+        --chart-2: 210 100% 30%; /* Blaxel Dark Blue */
+        --chart-3: 24 100% 50%; /* Blaxel Orange */
+        --chart-4: 210 100% 70%; /* Lighter Blue */
+        --chart-5: 24 100% 70%; /* Lighter Orange */
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
